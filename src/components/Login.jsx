@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import ButtonPrimary from './atom/ButtonPrimary';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Input from './atom/Input';
+import { useDispatch } from 'react-redux';
+import { login } from '../redux/features/auth/authSlice';
 
 const Login = () => {
 
+    const dispatch = useDispatch()
+    const navigate = useNavigate();
     const [userData, setUserData] = useState([
         {
             name: 'email',
@@ -28,8 +32,14 @@ const Login = () => {
         );
     };
 
+    const handleLogin = (e) => {
+        e.preventDefault()
+        dispatch(login())
+        navigate("/dashboard");
+    }
+
     return (
-        <section className='w-form'>
+        <section className='w-form' onSubmit={handleLogin}>
             <h1 className='text-title font-bold mb-4'>Hello Everybody!</h1>
             <p className='text-gray mb-8'>Welcome back, silahkan daftar kembali</p>
 

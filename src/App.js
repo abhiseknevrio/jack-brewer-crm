@@ -1,17 +1,27 @@
-
 import { Route, Routes } from 'react-router-dom';
-import { ForgotPassword, Home, Login, OTPVerification, Signup } from './components';
+import { Dashboard, Home } from './components';
+import { Provider } from 'react-redux';
+import { store } from './redux/app/store';
+import PrivateRoute from './PrivateRoute';
 
 function App() {
   return (
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/register' element={<Signup />} />
-      <Route path='/forgot-password' element={<ForgotPassword />} />
-      <Route path='/otp-verification' element={<OTPVerification />} />
-    </Routes>
-  );
+    <Provider store={store}>
+      <Routes>
+        <Route path="/dashboard" element={
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        } />
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Home />} />
+        <Route path='/register' element={<Home />} />
+        <Route path='/forgot-password' element={<Home />} />
+        <Route path='/otp-verification' element={<Home />} />
+        <Route path='/new-password' element={<Home />} />
+      </Routes>
+    </Provider>
+  )
 }
 
 export default App;

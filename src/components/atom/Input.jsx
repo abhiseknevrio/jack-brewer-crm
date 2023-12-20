@@ -10,6 +10,7 @@ const Input = (props) => {
                 type={props.type}
                 onChange={(e) => props.onChange(e)}
                 required={props.required ? true : false}
+                autoComplete='off'
             />
         </div>
     )

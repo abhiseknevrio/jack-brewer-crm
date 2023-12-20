@@ -15,7 +15,7 @@ const ForgotPassword = () => {
     };
 
     return (
-        <section className=''>
+        <section className='w-form'>
             <h1 className='text-title font-bold mb-4'>Forgot Password</h1>
             <p className='text-gray mb-8'>Please enter the email associated with your account</p>
 
