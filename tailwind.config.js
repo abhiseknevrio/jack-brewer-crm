@@ -16,8 +16,10 @@ module.exports = {
         linkColor: '#4099FF'
       },
       width: {
+        '40%': '40%',
+        '60%': '60%',
         '339': '339px',
-        form: '421px'
+        form: '421px',
       },
       fontSize: {
         title: '32px'
