@@ -8,7 +8,7 @@ import { useLocation } from 'react-router-dom';
 import Dashboard from './Dashboard'
 
 const componentsByPath = {
-    '/': <Login />,
+    '/': <Dashboard />,
     '/register': <Signup />,
     '/login': <Login />,
     '/forgot-password': <ForgotPassword />,
@@ -21,14 +21,17 @@ const Home = () => {
     const { pathname } = useLocation()
 
     return (
-        <div className='h-screen flex'>
-            <div className='w-40% bg-btnBg flex justify-center items-center'>
-                <img src='/assets/images/logo.png' alt='' />
-            </div>
-            <div className='w-60% flex justify-center items-center'>
-                {componentsByPath[pathname]}
-            </div>
-        </div>
+        // <div className='h-screen flex'>
+        //     <div className='w-40% bg-btnBg flex justify-center items-center'>
+        //         <img src='/assets/images/logo.png' alt='' />
+        //     </div>
+        //     <div className='w-60%'>
+        //         {componentsByPath[pathname]}
+        //     </div>
+        // </div>
+        <>
+            {componentsByPath[pathname]}
+        </>
     )
 }
 

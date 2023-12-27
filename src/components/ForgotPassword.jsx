@@ -15,25 +15,27 @@ const ForgotPassword = () => {
     };
 
     return (
-        <section className='w-form'>
-            <h1 className='text-title font-bold mb-4'>Forgot Password</h1>
-            <p className='text-gray mb-8'>Please enter the email associated with your account</p>
+        <section className='flex justify-center items-center h-screen'>
+            <div>
+                <h1 className='text-title font-bold mb-4'>Forgot Password</h1>
+                <p className='text-gray mb-8'>Please enter the email associated with your account</p>
 
-            <form className='mt-14' onSubmit={handleSubmit}>
-                <div className='mb-10'>
-                    <div className='mb-5'>Email</div>
-                    <Input
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        type='email'
-                        placeholder='Enter username'
-                        required={true}
-                    />
-                </div>
-                <div>
-                    <ButtonPrimary type="submit" text='Submit' />
-                </div>
-            </form>
+                <form className='mt-14 w-form' onSubmit={handleSubmit}>
+                    <div className='mb-10'>
+                        <div className='mb-5'>Email</div>
+                        <Input
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            type='email'
+                            placeholder='Enter username'
+                            required={true}
+                        />
+                    </div>
+                    <div>
+                        <ButtonPrimary type="submit" text='Submit' />
+                    </div>
+                </form>
+            </div>
         </section>
     )
 }

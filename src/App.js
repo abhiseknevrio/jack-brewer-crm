@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Dashboard, Home } from './components';
+import { Dashboard, Home, ServiceHistory, TermsAndConditions } from './components';
 import { Provider } from 'react-redux';
 import { store } from './redux/app/store';
 import PrivateRoute from './PrivateRoute';
@@ -8,9 +8,19 @@ function App() {
   return (
     <Provider store={store}>
       <Routes>
-        <Route path="/dashboard" element={
+        <Route path="/" element={
+          // <PrivateRoute>
+          <Dashboard />
+          // </PrivateRoute>
+        } />
+        <Route path="/terms-and-conditions" element={
           <PrivateRoute>
-            <Dashboard />
+            <TermsAndConditions />
+          </PrivateRoute>
+        } />
+        <Route path="/service-history" element={
+          <PrivateRoute>
+            <ServiceHistory />
           </PrivateRoute>
         } />
         <Route path='/' element={<Home />} />

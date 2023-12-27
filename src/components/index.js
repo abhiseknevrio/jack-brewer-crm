@@ -1,9 +1,16 @@
 export { default as Home } from './Home';
 export { default as Dashboard } from './Dashboard';
+export { default as TermsAndConditions } from './TermsAndConditions';
+export { default as ServiceHistory } from './ServiceHistory';
 export { default as Login } from './Login';
 export { default as Signup } from './Signup';
 export { default as ForgotPassword } from './ForgotPassword';
 export { default as OTPVerification } from './OTPVerification';
 export { default as NewPassword } from './NewPassword';
 export { default as ButtonPrimary } from './atom/ButtonPrimary';
+export { default as ButtonSecondary } from './atom/ButtonSecondary';
 export { default as Input } from './atom/Input';
+export { default as ServiceCard } from './atom/ServiceCard';
+export { default as RepeatModal } from './atom/RepeatModal';
+export { default as CommonModal } from './atom/CommonModal';
+export { default as Dropdown } from './atom/Dropdown';
