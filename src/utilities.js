@@ -1,4 +1,4 @@
-export const drawRect = (detections, ctx) => {
+const drawRect = (detections, ctx) => {
     // Loop through each prediction
     detections.forEach(prediction => {
 
@@ -19,3 +19,5 @@ export const drawRect = (detections, ctx) => {
         ctx.stroke();
     });
 }
+
+export default drawRect
