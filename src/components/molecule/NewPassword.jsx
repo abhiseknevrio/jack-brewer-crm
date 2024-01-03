@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ButtonPrimary from './atom/ButtonPrimary';
-import Input from './atom/Input';
+import ButtonPrimary from '../atom/ButtonPrimary';
+import Input from '../atom/Input';
 import { useNavigate } from 'react-router-dom';
 
 const NewPassword = () => {
@@ -21,7 +21,7 @@ const NewPassword = () => {
     };
 
     return (
-        <section className=''>
+        <section className='w-form'>
             <h1 className='text-title font-bold mb-5'>Enter New Password</h1>
             <p className='text-gray w-339'>Reset your password to recovery & login to your account.</p>
 

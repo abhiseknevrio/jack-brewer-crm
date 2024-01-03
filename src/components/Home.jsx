@@ -1,14 +1,14 @@
 import React from 'react'
-import Login from './Login'
-import Signup from './Signup'
-import ForgotPassword from './ForgotPassword'
-import OTPVerification from './OTPVerification'
-import NewPassword from './NewPassword';
+import Login from './molecule/Login'
+import Signup from './molecule/Signup'
+import ForgotPassword from './molecule/ForgotPassword'
+import OTPVerification from './molecule/OTPVerification'
+import NewPassword from './molecule/NewPassword';
 import { useLocation } from 'react-router-dom';
 import Dashboard from './Dashboard'
 
 const componentsByPath = {
-    '/': <Signup />,
+    '/': <Dashboard />,
     '/register': <Signup />,
     '/login': <Login />,
     '/forgot-password': <ForgotPassword />,
@@ -22,13 +22,16 @@ const Home = () => {
 
     return (
         <div className='h-screen flex'>
-            <div className='w-1/2 bg-btnBg flex justify-center items-center'>
+            <div className='w-40% bg-btnBg flex justify-center items-center'>
                 <img src='/assets/images/logo.png' alt='' />
             </div>
-            <div className='w-1/2 flex justify-center items-center'>
+            <div className='w-60%'>
                 {componentsByPath[pathname]}
             </div>
         </div>
+        // <>
+        //     {componentsByPath[pathname]}
+        // </>
     )
 }
 

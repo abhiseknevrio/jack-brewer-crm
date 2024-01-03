@@ -18,3 +18,47 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.service-card {
+  box-shadow: 0px 1px 4px #00000029;
+  border-radius: 14px;
+  opacity: 1;
+}
+
+.homeCard {
+  background: transparent 0% 0% no-repeat padding-box;
+  border: 1px solid #8888883D;
+  border-radius: 14px;
+  opacity: 1;
+}
+
+/* Dropdown.css */
+
+.dropdown-select {
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  outline: none;
+  cursor: pointer;
+  min-width: 318px;
+}
+
+/* Style for the dropdown arrow */
+.dropdown-select::after {
+  content: '▼';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Style for dropdown options */
+.dropdown-select option {
+  font-size: 16px;
+  background-color: #fff;
+}
