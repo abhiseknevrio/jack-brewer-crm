@@ -26,6 +26,10 @@ module.exports = {
       },
       fontSize: {
         title: '32px'
+      },
+      margin: {
+        '30': '30px',
+        '130': '130px'
       }
     },
   },

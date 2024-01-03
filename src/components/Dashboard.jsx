@@ -1,7 +1,7 @@
 import React from 'react';
-import TermsAndConditions from './TermsAndConditions';
+import TermsAndConditions from './molecule/TermsAndConditions';
 import { Link } from 'react-router-dom';
-import ServiceHistory from './ServiceHistory';
+import ServiceHistory from './molecule/ServiceHistory';
 import Dropdown from './atom/Dropdown';
 import ButtonPrimary from './atom/ButtonPrimary';
 
@@ -15,15 +15,15 @@ const Dashboard = () => {
                     <h1 className='text-lg text-bgWhite font-medium'>Hi, Abhisek</h1>
                 </div>
                 <div>
-                    <Link to='/' className='flex items-center mb-4 text-bgWhite'>
+                    <Link to='/' className='flex items-center mb-30 text-bgWhite'>
                         <img src='/assets/images/home.png' alt='' className='w-6 h-6 mr-2' />
                         <span className='text-lg font-medium'>Home</span>
                     </Link>
-                    <Link to='/service-history' className='flex items-center mb-4 text-bgWhite'>
+                    <Link to='/service-history' className='flex items-center mb-30 text-bgWhite'>
                         <img src='/assets/images/service.png' alt='' className='w-6 h-6 mr-2' />
                         <span className='text-lg font-medium'>Service History</span>
                     </Link>
-                    <Link to='/terms-and-conditions' className='flex items-center mb-4 text-bgWhite'>
+                    <Link to='/terms-and-conditions' className='flex items-center mb-30 text-bgWhite'>
                         <img src='/assets/images/terms-and-conditions.png' alt='' className='w-6 h-6 mr-2' />
                         <span className='text-lg font-medium'>Terms & Conditions</span>
                     </Link>
