@@ -60,7 +60,6 @@ const WebcamComponent = () => {
         setImgSrc(imageSrc);
     }, [webcamRef, setImgSrc]);
 
-    // console.log("capture", imgSrc)
 
     useEffect(() => {
         runCoco()
@@ -75,7 +74,7 @@ const WebcamComponent = () => {
                     />
                 )
                     :
-                    <>
+                    <div className=''>
                         <Webcam
                             ref={webcamRef}
                             muted={true}
@@ -91,6 +90,7 @@ const WebcamComponent = () => {
                                 width: 640,
                                 height: 480,
                             }}
+                            onClickCapture={capture}
                         />
 
                         <canvas
@@ -103,11 +103,13 @@ const WebcamComponent = () => {
                                 right: 0,
                                 textAlign: "center",
                                 zindex: 8,
-                                width: 640,
-                                height: 480,
+                                width: 260,
+                                height: 360,
+                                borderRadius: '50%',
+                                border: '5px solid #485DD9'
                             }}
                         />
-                    </>
+                    </div>
             }
         </div>
     )

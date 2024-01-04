@@ -44,7 +44,7 @@ const Signup = () => {
                 <h1 className='text-title font-bold mb-4 w-form'>Register now</h1>
                 <form className='mt-10  w-form' onSubmit={handleSubmit}>
                     <div>
-                        {/* <div className='input-container mb-4'>
+                        <div className='input-container mb-4'>
                             <div>First Name</div>
                             <input value={userData.firstName} type='text' onChange={(e) => handleInputChange('firstName', e.target.value)} />
                         </div>
@@ -55,14 +55,19 @@ const Signup = () => {
                         <div className='input-container mb-4'>
                             <div>Address</div>
                             <input type='text' value={userData.address} onChange={(e) => handleInputChange('address', e.target.value)} />
-                        </div> */}
+                        </div>
                         <div className='input-container mb-4'>
                             <div>Photo</div>
                             <div className='flex py-2 pl-3 my-2 bg-blue-400 cursor-pointer' onClick={() => setOpenCamera(!openCamera)}>
                                 Click Photo
                             </div>
+                            <div>
+                                {
+                                    openCamera && <WebcamComponent />
+                                }
+                            </div>
                         </div>
-                        {/* <div className='input-container mb-4'>
+                        <div className='input-container mb-4'>
                             <div>ID Card</div>
                             <input type='file' value={userData.idCard} onChange={(e) => handleFileChange('idCard', e)} />
                         </div>
@@ -72,8 +77,8 @@ const Signup = () => {
                         </div>
                         <div className='input-container mb-4'>
                             <div>Phone No</div>
-                            <input type='tel' value={userData.phoneNo} onChange={(e) => handleInputChange('phoneNo', e.target.value)} /> */}
-                        {/* </div>
+                            <input type='tel' value={userData.phoneNo} onChange={(e) => handleInputChange('phoneNo', e.target.value)} />
+                        </div>
                         <div className='input-container mb-4'>
                             <div>Email (Optional)</div>
                             <input type='email' value={userData.email} onChange={(e) => handleInputChange('email', e.target.value)} />
@@ -88,8 +93,8 @@ const Signup = () => {
                                 <option>Single</option>
                                 <option>Married</option>
                             </select>
-                        </div> */}
-                        {/* <div className='input-container mb-4'>
+                        </div>
+                        <div className='input-container mb-4'>
                             <div>Services needed</div>
                             <select value={userData.servicesNeeded} onChange={(e) => handleInputChange('servicesNeeded', e.target.value)}>
                                 <option>A</option>
@@ -98,13 +103,8 @@ const Signup = () => {
                                 <option>D</option>
                                 <option>E</option>
                             </select>
-                        </div> */}
+                        </div>
                     </div>
-
-
-                    {
-                        openCamera && <WebcamComponent />
-                    }
                     <div>
                         <ButtonPrimary text='Sign Up' />
                     </div>
