@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Dashboard, ForgotPasswordPage, Home, LoginPage, NewPassword, OTPVerificationPage, ServiceHistory, SignupPage, TermsAndConditions } from './components';
+import { HomePage, ForgotPasswordPage, LoginPage, NewPassword, OTPVerificationPage, SignupPage } from './components';
 import { Provider } from 'react-redux';
 import { store } from './redux/app/store';
 import PrivateRoute from './PrivateRoute';
@@ -10,20 +10,19 @@ function App() {
       <Routes>
         <Route path="/" element={
           <PrivateRoute>
-            <Dashboard />
+            <HomePage />
           </PrivateRoute>
         } />
         <Route path="/terms-and-conditions" element={
           <PrivateRoute>
-            <TermsAndConditions />
+            <HomePage />
           </PrivateRoute>
         } />
         <Route path="/service-history" element={
           <PrivateRoute>
-            <ServiceHistory />
+            <HomePage />
           </PrivateRoute>
         } />
-        <Route path='/' element={<Home />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/register' element={<SignupPage />} />
         <Route path='/forgot-password' element={<ForgotPasswordPage />} />

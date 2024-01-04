@@ -1,12 +1,12 @@
 export { default as WithoutAuthLeftCompo } from './atom/WithoutAuthLeftCompo';
-export { default as Home } from './Home';
-export { default as Dashboard } from './Dashboard';
+export { default as HomePage } from './page/HomePage';
 export { default as TermsAndConditions } from './molecule/TermsAndConditions';
 export { default as ServiceHistory } from './molecule/ServiceHistory';
 export { default as Login } from './molecule/Login';
 export { default as Signup } from './molecule/Signup';
 export { default as ForgotPassword } from './molecule/ForgotPassword';
 export { default as OTPVerification } from './molecule/OTPVerification';
+export { default as ServiceRequest } from './molecule/UserProfile';
 export { default as NewPassword } from './molecule/NewPassword';
 export { default as ButtonPrimary } from './atom/ButtonPrimary';
 export { default as ButtonSecondary } from './atom/ButtonSecondary';

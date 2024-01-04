@@ -6,7 +6,7 @@ const ServiceHistory = () => {
     const servicesHistory = [1, 2, 3, 4, 5, 6, 7]
 
     return (
-        <div className='w-3/4'>
+        <div className=''>
             <h1 className='text-3xl font-medium border-b border-lightGray pb-2.5'>All Service History</h1>
             <div className='text-xl font-medium mt-10 grid grid-cols-2 px-10'>
                 <div>Services</div>
