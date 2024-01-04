@@ -41,10 +41,12 @@ const Login = () => {
     return (
         <section className='flex justify-center items-center h-screen'>
             <div>
-                <h1 className='text-title font-bold mb-4'>Hello Everybody!</h1>
-                <p className='text-gray mb-8'>Welcome back, silahkan daftar kembali</p>
+                <div>
+                    <h1 className='text-title font-bold mb-4'>Hello Everybody!</h1>
+                    <p className='text-gray'>Welcome back jack brewer foundation!</p>
+                </div>
 
-                <form className='mt-10 w-form' onSubmit={handleLogin}>
+                <form className='mt-14 w-form' onSubmit={handleLogin}>
                     <div>
                         {userData.map((field) => (
                             <Input
@@ -57,7 +59,7 @@ const Login = () => {
                         ))}
                     </div>
                     <div className='text-right mb-8'>
-                        <Link to={'/forgot-password'} className='text-gray hover:text-btnBg'>Forgot Password</Link>
+                        <Link to={'/forgot-password'} className='text-gray text-xs font-medium hover:text-btnBg'>Forgot Password?</Link>
                     </div>
                     <div>
                         <ButtonPrimary text='Log In' />
@@ -66,14 +68,14 @@ const Login = () => {
 
                 <div className='flex items-center my-10'>
                     <div className='border-t border-gray w-1/4'></div>
-                    <div className='text-gray mx-auto text-xs'>Or continue with</div>
+                    <div className='text-gray mx-auto font-medium text-xs'>Or continue with</div>
                     <div className='border-t border-gray w-1/4'></div>
                 </div>
                 <div className='flex justify-between'>
                     <div>Facebook</div>
                     <div>Google</div>
                 </div>
-                <div className='text-gray flex justify-end mt-10'>
+                <div className='text-gray text-xs flex justify-end items-center mt-10'>
                     Don't have an account? &nbsp; <Link to={'/register'} className='text-btnBg font-medium'>Register here</Link>
                 </div>
             </div>

@@ -26,11 +26,15 @@ module.exports = {
         '339': '339px',
         form: '421px',
       },
+      height: {
+        '700': '700px'
+      },
       fontSize: {
         title: '32px'
       },
       margin: {
         '30': '30px',
+        '50': '50px',
         '130': '130px'
       }
     },

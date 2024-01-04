@@ -11,8 +11,10 @@ const OTPVerification = () => {
     return (
         <section className='flex justify-center items-center h-screen'>
             <div className='w-form'>
-                <h1 className='text-title font-bold mb-5'>OTP Code Verification</h1>
-                <p className='text-gray'>Enter verification code sent on your email address</p>
+                <div>
+                    <h1 className='text-title font-bold mb-3'>OTP Code Verification</h1>
+                    <p className='text-gray text-base'>Enter verification code sent on your email address</p>
+                </div>
 
                 <div className='my-8 flex justify-center'>
                     <OtpInput
@@ -45,7 +47,7 @@ const OTPVerification = () => {
                     <ButtonPrimary type="submit" text='Submit' />
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 

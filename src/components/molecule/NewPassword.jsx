@@ -21,39 +21,41 @@ const NewPassword = () => {
     };
 
     return (
-        <section className='w-form'>
-            <h1 className='text-title font-bold mb-5'>Enter New Password</h1>
-            <p className='text-gray w-339'>Reset your password to recovery & login to your account.</p>
+        <section className='w-full h-screen flex justify-center items-center'>
+            <div className='w-form'>
+                <div>
+                    <h1 className='text-title font-bold mb-4'>Enter New Password</h1>
+                    <p className='text-gray text-base w-339'>Reset your password to recovery & login to your account.</p>
+                </div>
 
-            <div className='my-10'>
-                <div>
-                    <div className='mb-3'>New password</div>
-                    <Input
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        type={showPassword ? 'text' : 'password'}
-                        placeholder='Enter new password'
-                        required={true}
-                    />
+                <div className='my-10'>
+                    <div>
+                        <div className='mb-3 text-sm text-textBlack'>New password</div>
+                        <Input
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            type={showPassword ? 'text' : 'password'}
+                            placeholder='Enter new password'
+                            required={true}
+                        />
+                    </div>
+                    <div>
+                        <div className='mb-3 text-sm text-textBlack'>Repeat Password</div>
+                        <Input
+                            value={passwordCheck}
+                            onChange={(e) => setPasswordCheck(e.target.value)}
+                            type={showPassword ? 'text' : 'password'}
+                            placeholder='Enter same password'
+                            required={true}
+                        />
+                    </div>
+                    <span className='cursor-pointer' onClick={togglePasswordVisibility}>
+                        {showPassword ? 'Hide' : 'Show'} Password
+                    </span>
                 </div>
-                <div>
-                    <div className='mb-3'>Repeat Password</div>
-                    <Input
-                        value={passwordCheck}
-                        onChange={(e) => setPasswordCheck(e.target.value)}
-                        type={showPassword ? 'text' : 'password'}
-                        placeholder='Enter same password'
-                        required={true}
-                    />
-                </div>
-                <span className='cursor-pointer' onClick={togglePasswordVisibility}>
-                    {showPassword ? 'Hide' : 'Show'} Password
-                </span>
-            </div>
-            <div>
                 <ButtonPrimary text='Confirm' />
             </div>
-        </section>
+        </section >
     )
 }
 

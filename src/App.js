@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { HomePage, ForgotPasswordPage, LoginPage, NewPassword, OTPVerificationPage, SignupPage } from './components';
+import { HomePage, ForgotPasswordPage, LoginPage, OTPVerificationPage, SignupPage, NewPasswordPage } from './components';
 import { Provider } from 'react-redux';
 import { store } from './redux/app/store';
 import PrivateRoute from './PrivateRoute';
@@ -27,7 +27,7 @@ function App() {
         <Route path='/register' element={<SignupPage />} />
         <Route path='/forgot-password' element={<ForgotPasswordPage />} />
         <Route path='/otp-verification' element={<OTPVerificationPage />} />
-        <Route path='/new-password' element={<NewPassword />} />
+        <Route path='/new-password' element={<NewPasswordPage />} />
       </Routes>
     </Provider>
   )

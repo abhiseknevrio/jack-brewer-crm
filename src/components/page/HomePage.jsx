@@ -1,14 +1,14 @@
 import React from 'react';
-import TermsAndConditions from '../molecule/TermsAndConditions';
+import TermsAndConditionsPage from '../page/TermsAndConditionsPage';
 import { useLocation } from 'react-router-dom';
-import ServiceHistory from '../molecule/ServiceHistory';
 import UserProfile from '../molecule/UserProfile';
 import Dashboard from '../molecule/Dashboard';
+import ServiceHistoryPage from './ServiceHistoryPage';
 
 const componentsByPath = {
     '/': <UserProfile />,
-    '/terms-and-conditions': <TermsAndConditions />,
-    '/service-history': <ServiceHistory />,
+    '/terms-and-conditions': <TermsAndConditionsPage />,
+    '/service-history': <ServiceHistoryPage />,
 };
 
 const HomePage = () => {
@@ -16,14 +16,14 @@ const HomePage = () => {
     const { pathname } = useLocation()
 
     return (
-        <div className='flex h-screen'>
+        <div className='flex h-screen overflow-hidden'>
             {/* Sidebar */}
             <div className='w-20% bg-btnBg p-4'>
                 <Dashboard />
             </div>
 
             {/* Main Content */}
-            <div className='mt-12 mx-130 w-80%'>
+            <div className='mt-50 mx-130 w-80%'>
                 {componentsByPath[pathname]}
             </div>
         </div >

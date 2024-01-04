@@ -15,9 +15,9 @@ const ServiceCard = () => {
 
     return (
         <>
-            <div className='grid grid-cols-2 px-10 py-3 service-card'>
+            <div className='grid grid-cols-2 px-10 py-3 service-card text-textBlack'>
                 <div>
-                    <div className='font-medium'>Clothing</div>
+                    <div className='text-base font-normal'>Clothing</div>
                     <div className='text-gray text-xs'>5 days ago</div>
                 </div>
                 <div className='grid grid-cols-3'>

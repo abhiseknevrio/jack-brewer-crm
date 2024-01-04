@@ -17,12 +17,14 @@ const ForgotPassword = () => {
     return (
         <section className='flex justify-center items-center h-screen'>
             <div>
-                <h1 className='text-title font-bold mb-4'>Forgot Password</h1>
-                <p className='text-gray mb-8'>Please enter the email associated with your account</p>
+                <div>
+                    <h1 className='text-title font-bold mb-4'>Forgot Password</h1>
+                    <p className='text-gray text-base'>Please enter the email associated with your account</p>
+                </div>
 
                 <form className='mt-14 w-form' onSubmit={handleSubmit}>
-                    <div className='mb-10'>
-                        <div className='mb-5'>Email</div>
+                    <div className=''>
+                        <div className='mb-3 text-sm text-textBlack'>Email</div>
                         <Input
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
@@ -31,7 +33,7 @@ const ForgotPassword = () => {
                             required={true}
                         />
                     </div>
-                    <div>
+                    <div className='mt-16'>
                         <ButtonPrimary type="submit" text='Submit' />
                     </div>
                 </form>
